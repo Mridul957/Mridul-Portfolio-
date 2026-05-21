@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "2GBHuXHeTiGvrrIYvMzyi"
+uri = "file://artifacts/portfolio/public/portfolio/wedding.png"
+type = "image"
+title = "Cinematic wedding film still"
+
+[[generated]]
+id = "bgCQ1L2F3fTtH5QNjw5FG"
+uri = "file://artifacts/portfolio/public/portfolio/event.png"
+type = "image"
+title = "Cinematic event aftermovie still"
+
+[[generated]]
+id = "BRFJ6r_w8ejgQpzU5DQU3"
+uri = "file://artifacts/portfolio/public/portfolio/music-video.png"
+type = "image"
+title = "Cinematic music video still"
+
+[[generated]]
+id = "WgHJoULda1nwFYooffVZA"
+uri = "file://artifacts/portfolio/public/portfolio/travel.png"
+type = "image"
+title = "Cinematic travel video still"
+
+[[generated]]
+id = "nVtbEl_gyvZjDZDFv1L46"
+uri = "file://artifacts/portfolio/public/portfolio/commercial.png"
+type = "image"
+title = "Cinematic commercial ad still"

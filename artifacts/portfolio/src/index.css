@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --font-sans: var(--app-font-sans);
+  --font-heading: var(--app-font-heading);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root, .dark {
+  /* Cinematic Dark Palette */
+  --background: 20 10% 6%; /* Near-black warm */
+  --foreground: 40 20% 92%; /* Off-white */
+  
+  --card: 20 8% 10%; /* Dark warm gray */
+  --card-foreground: 40 20% 92%;
+  --card-border: 20 10% 15%;
+  
+  --popover: 20 8% 10%;
+  --popover-foreground: 40 20% 92%;
+  --popover-border: 20 10% 15%;
+  
+  --primary: 38 95% 55%; /* Amber / Gold */
+  --primary-foreground: 20 10% 6%;
+  
+  --secondary: 20 10% 15%;
+  --secondary-foreground: 40 20% 92%;
+  
+  --muted: 20 10% 12%;
+  --muted-foreground: 30 10% 55%; /* Warm gray */
+  
+  --accent: 38 95% 55%;
+  --accent-foreground: 20 10% 6%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 40 20% 92%;
+  
+  --border: 20 10% 15%;
+  --input: 20 10% 15%;
+  --ring: 38 95% 55%;
+
+  --app-font-sans: 'Inter', sans-serif;
+  --app-font-heading: 'Space Grotesk', sans-serif;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+.cinematic-glow {
+  background: radial-gradient(circle at 50% -20%, rgba(228, 155, 15, 0.15) 0%, rgba(16, 14, 14, 0) 60%);
+}
+
+.text-gradient-amber {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E49B0F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
