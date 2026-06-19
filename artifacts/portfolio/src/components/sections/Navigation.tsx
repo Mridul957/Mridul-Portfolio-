@@ -24,28 +24,28 @@ export function Navigation({ activeSection }: { activeSection: string }) {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="flex items-center gap-2 p-2 rounded-full bg-card/80 backdrop-blur-xl border border-border shadow-2xl"
+        className="flex items-center gap-1.5 p-2 rounded-full glass-pill shadow-2xl border-white/[0.08]"
       >
         {navItems.map((item) => (
           <button
             key={item.id}
             onClick={() => scrollTo(item.id)}
-            className={`relative group flex items-center justify-center w-12 h-12 rounded-full transition-colors duration-300 ${
-              activeSection === item.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
+            className={`relative group flex items-center justify-center w-11 h-11 rounded-full transition-colors duration-300 ${
+              activeSection === item.id ? "text-amber-500" : "text-white/50 hover:text-white"
             }`}
             aria-label={item.label}
           >
             {activeSection === item.id && (
               <motion.div
                 layoutId="nav-pill"
-                className="absolute inset-0 bg-primary/10 rounded-full"
+                className="absolute inset-0 bg-white/[0.08] border border-white/10 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.05)]"
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
               />
             )}
-            <item.icon className="w-5 h-5 relative z-10" />
+            <item.icon className="w-4.5 h-4.5 relative z-10" />
             
             {/* Tooltip */}
-            <span className="absolute -top-10 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 bg-popover text-popover-foreground text-xs px-2 py-1 rounded-md border border-border whitespace-nowrap">
+            <span className="absolute -top-12 left-1/2 -translate-x-1/2 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 bg-black/90 text-white/90 text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-full border border-white/10 whitespace-nowrap shadow-lg">
               {item.label}
             </span>
           </button>

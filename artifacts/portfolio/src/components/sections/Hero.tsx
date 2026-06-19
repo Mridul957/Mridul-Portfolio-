@@ -1,84 +1,119 @@
 import { motion } from "framer-motion";
-import { MapPin, Mail, Linkedin, Phone, Download } from "lucide-react";
 
 export function Hero({ id }: { id: string }) {
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToPortfolio = () => {
+    const element = document.getElementById("portfolio");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section id={id} className="min-h-screen flex flex-col justify-center pt-20 pb-10">
-      <div className="flex justify-between items-start mb-16">
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-card border border-border text-sm font-medium"
-        >
-          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          Open to work
-        </motion.div>
+    <section id={id} className="min-h-screen flex flex-col justify-center pt-24 pb-12 relative overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Left Column: Typography and Action Buttons */}
+        <div className="lg:col-span-7 space-y-8 z-10">
+          {/* OPEN TO WORK pill */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/[0.04] text-[10px] font-extrabold text-amber-500 tracking-[0.18em] uppercase"
+          >
+            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse shadow-[0_0_10px_rgba(245,158,11,0.8)]" />
+            OPEN TO WORK
+          </motion.div>
 
-        <motion.a 
-          href="#"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm font-medium"
-        >
-          <Download className="w-4 h-4" />
-          Download CV
-        </motion.a>
-      </div>
+          {/* Subtitle / Role */}
+          <motion.h3
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-amber-500 font-heading font-extrabold tracking-[0.25em] uppercase text-xs md:text-sm pt-2"
+          >
+            CINEMATIC VIDEO EDITOR & CINEMATOGRAPHER
+          </motion.h3>
 
-      <div className="space-y-6">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-primary font-heading font-medium tracking-wider uppercase text-sm md:text-base"
-        >
-          Cinematic Video Editor & Cinematographer
-        </motion.h2>
+          {/* Stacked Name "Mridul Gupta." */}
+          <div className="space-y-0.5">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-7xl md:text-8xl lg:text-[7.5rem] font-display font-extrabold text-white leading-[0.9] tracking-[-0.04em] text-glow-white"
+            >
+              Mridul
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-7xl md:text-8xl lg:text-[7.5rem] font-serif font-bold text-amber-500 italic leading-[0.9] tracking-[-0.04em]"
+            >
+              Gupta.
+            </motion.h1>
+          </div>
 
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold text-gradient-amber leading-none tracking-tighter"
-        >
-          Mridul<br />Gupta.
-        </motion.h1>
+          {/* Intro text */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-white/60 text-base md:text-lg max-w-xl leading-relaxed font-sans"
+          >
+            I create cinematic visuals that turn moments into stories. From weddings and music videos to commercial content and social media reels, I focus on emotion, storytelling, and high-quality editing that connects with people.
+          </motion.p>
 
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          {/* Buttons Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-wrap gap-4 pt-4"
+          >
+            <button
+              onClick={scrollToPortfolio}
+              className="inline-flex items-center gap-3.5 bg-amber-500 text-black px-8 py-4 rounded-full font-heading font-extrabold text-xs tracking-wider uppercase hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_4px_25px_rgba(245,158,11,0.25)]"
+            >
+              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Watch My Work
+            </button>
+
+            <button
+              onClick={scrollToContact}
+              className="inline-flex items-center gap-3.5 bg-white/[0.02] backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-full font-heading font-extrabold text-xs tracking-wider uppercase hover:bg-white hover:text-black hover:border-white transition-all duration-300 hover:scale-105 active:scale-95"
+            >
+              Let's Work Together
+              <svg className="w-3.5 h-3.5 stroke-current stroke-[2.5] fill-none" viewBox="0 0 24 24">
+                <path d="M12 5v14m-7-7 7 7 7-7" />
+              </svg>
+            </button>
+          </motion.div>
+        </div>
+
+        {/* Right Column: Exact Portrait Mockup */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, x: 30 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-muted-foreground text-lg md:text-xl max-w-2xl leading-relaxed mt-8"
+          className="lg:col-span-5 w-full h-[350px] md:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden relative border border-white/[0.08] shadow-[0_0_50px_rgba(0,0,0,0.8)]"
         >
-          I create cinematic visuals that turn moments into stories. From weddings and music videos to commercial content and social media reels, I focus on emotion, storytelling, and high-quality editing that connects with people.
-        </motion.p>
+          <img
+            src="/hero-portrait.png"
+            alt="Mridul Gupta Cinematic Silhouette"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
       </div>
-
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.6 }}
-        className="flex flex-wrap gap-6 mt-16 text-muted-foreground text-sm"
-      >
-        <div className="flex items-center gap-2">
-          <MapPin className="w-4 h-4 text-primary" />
-          <span>Jaipur, Rajasthan</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <Mail className="w-4 h-4 text-primary" />
-          <span>hello@mridulgupta.com</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <Linkedin className="w-4 h-4 text-primary" />
-          <span>in/mridulgupta</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <Phone className="w-4 h-4 text-primary" />
-          <span>+91 98765 43210</span>
-        </div>
-      </motion.div>
     </section>
   );
 }

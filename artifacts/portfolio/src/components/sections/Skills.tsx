@@ -53,19 +53,19 @@ export function Skills({ id }: { id: string }) {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h4 className="text-2xl font-heading font-bold mb-8">Software</h4>
+          <h4 className="text-2xl font-heading font-bold text-white mb-8">Software</h4>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {tools.map((tool, index) => (
               <div 
                 key={index}
-                className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:border-primary/50 transition-colors duration-300 group"
+                className="glass-panel-interactive rounded-[20px] p-6 flex flex-col items-center justify-center gap-4 group"
               >
                 {tool.icon ? (
-                  <tool.icon className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                  <tool.icon className="w-10 h-10 text-white/60 group-hover:text-amber-500 transition-colors duration-300" />
                 ) : (
-                  <div className="w-10 h-10 rounded bg-muted-foreground/20 flex items-center justify-center text-xs font-bold text-muted-foreground group-hover:text-primary transition-colors duration-300">CC</div>
+                  <div className="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-xs font-bold text-white/60 group-hover:text-amber-500 transition-colors duration-300">CC</div>
                 )}
-                <span className="text-sm font-medium text-center">{tool.name}</span>
+                <span className="text-sm font-semibold text-white/80 text-center">{tool.name}</span>
               </div>
             ))}
           </div>
@@ -80,14 +80,14 @@ export function Skills({ id }: { id: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              className="bg-card border border-border rounded-2xl p-8"
+              className="glass-panel rounded-[24px] p-8"
             >
-              <h4 className="text-xl font-heading font-bold text-primary mb-6">{category.title}</h4>
+              <h4 className="text-xl font-heading font-bold text-amber-500 mb-6">{category.title}</h4>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, sIndex) => (
                   <span 
                     key={sIndex}
-                    className="px-3 py-1.5 bg-secondary text-secondary-foreground rounded-md text-sm"
+                    className="px-3.5 py-1.5 bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.08] transition-colors duration-300 rounded-[10px] text-sm text-white/80 font-medium"
                   >
                     {skill}
                   </span>
@@ -104,12 +104,12 @@ export function Skills({ id }: { id: string }) {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <h4 className="text-2xl font-heading font-bold mb-8">Services</h4>
+          <h4 className="text-2xl font-heading font-bold text-white mb-8">Services</h4>
           <div className="flex flex-wrap gap-3">
             {services.map((service, index) => (
               <span 
                 key={index}
-                className="px-4 py-2 border border-border rounded-full text-sm hover:border-primary hover:text-primary transition-colors duration-300 cursor-default"
+                className="px-4.5 py-2.5 bg-white/[0.03] border border-white/[0.06] hover:border-amber-500/50 hover:text-amber-500 rounded-full text-sm text-white/80 font-medium transition-all duration-300 cursor-default shadow-md"
               >
                 {service}
               </span>

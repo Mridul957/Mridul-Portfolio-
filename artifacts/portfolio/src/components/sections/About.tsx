@@ -46,16 +46,16 @@ export function About({ id }: { id: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-card border border-border rounded-2xl p-8 hover-elevate transition-all duration-300"
+            className="glass-panel-interactive rounded-[24px] p-8"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Award className="text-primary w-6 h-6" />
-              <h4 className="text-2xl font-heading font-bold">Achievements</h4>
+              <Award className="text-amber-500 w-6 h-6" />
+              <h4 className="text-2xl font-heading font-bold text-white">Achievements</h4>
             </div>
             <ul className="space-y-4">
               {achievements.map((achievement, index) => (
-                <li key={index} className="flex items-start gap-3 text-muted-foreground">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                <li key={index} className="flex items-start gap-3 text-white/70">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
                   <span>{achievement}</span>
                 </li>
               ))}
@@ -67,13 +67,13 @@ export function About({ id }: { id: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-card border border-border rounded-2xl p-8 hover-elevate transition-all duration-300"
+            className="glass-panel-interactive rounded-[24px] p-8"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Heart className="text-primary w-6 h-6" />
-              <h4 className="text-2xl font-heading font-bold">Personal Touch</h4>
+              <Heart className="text-amber-500 w-6 h-6" />
+              <h4 className="text-2xl font-heading font-bold text-white">Personal Touch</h4>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-white/70 leading-relaxed">
               When I'm not editing videos, I enjoy listening to music and stargazing at night. I love turning ordinary moments into cinematic experiences that people can feel emotionally.
             </p>
           </motion.div>
