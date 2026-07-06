@@ -257,22 +257,16 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            onClick={() => setLocation("/portfolio")}
-            className="w-full bg-white/[0.02] backdrop-blur-[24px] border border-white/[0.06] rounded-3xl sm:rounded-[32px] p-5 sm:p-6 md:p-12 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.06)] min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between transition-all duration-700 ease-out cursor-pointer hover:bg-white/[0.03] hover:border-amber-500/20 hover:shadow-[0_40px_80px_-15px_rgba(228,155,15,0.1)] hover:scale-[1.01]"
+            className="w-full bg-white/[0.02] backdrop-blur-[24px] border border-white/[0.06] rounded-3xl sm:rounded-[32px] p-5 sm:p-6 md:p-12 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.06)] min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between transition-all duration-700 ease-out"
           >
             <div className="flex-1 flex flex-col justify-center">
               <PortfolioTab 
-                isExpanded={false} 
-                onExpand={(catId) => setLocation(`/portfolio?category=${catId}`)}
+                isExpanded={true} 
+                onSelectCategory={(catId) => {
+                  window.history.pushState(null, "", "/portfolio");
+                  setLocation(`/portfolio?category=${catId}`);
+                }}
               />
-            </div>
-
-            {/* Bottom CTA */}
-            <div 
-              onClick={() => setLocation("/portfolio")}
-              className="flex items-center justify-center mt-6 pt-4 border-t border-white/[0.02] text-[10px] font-extrabold font-heading uppercase tracking-wider text-amber-500 hover:text-amber-400 transition-colors duration-200 cursor-pointer"
-            >
-              Explore Cinematic Masterpieces →
             </div>
           </motion.div>
         </section>

@@ -247,10 +247,31 @@ export function PortfolioTab({
     }
   }, [isExpanded]);
 
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      if (activeVideo) {
+        setActiveVideo(null);
+        setIsPlaying(false);
+      }
+    };
+    
+    if (activeVideo) {
+      window.history.pushState({ videoOpen: true }, "", window.location.href);
+      window.addEventListener("popstate", handlePopState);
+    }
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [activeVideo]);
+
   const closeVideo = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     setActiveVideo(null);
     setIsPlaying(false);
+    if (window.history.state?.videoOpen) {
+      window.history.back();
+    }
   };
 
   const isDirectory = isExpanded && !selectedCategory;
@@ -338,8 +359,8 @@ export function PortfolioTab({
                       transition={{ duration: 0.4, delay: index * 0.05 }}
                     >
                       <div className="relative aspect-video rounded-xl overflow-hidden bg-black">
-                        <div className={`absolute inset-0 grid ${(cat.videos.length === 2 || cat.videos.length === 3) ? 'grid-cols-2' : 'grid-cols-2 grid-rows-2'} gap-0.5`}>
-                          {cat.videos.slice(0, (cat.videos.length === 2 || cat.videos.length === 3) ? 2 : 4).map(vid => (
+                        <div className={`absolute inset-0 grid ${cat.videos.length === 1 ? 'grid-cols-1' : (cat.videos.length === 2 || cat.videos.length === 3) ? 'grid-cols-2' : 'grid-cols-2 grid-rows-2'} gap-0.5`}>
+                          {cat.videos.slice(0, cat.videos.length === 1 ? 1 : (cat.videos.length === 2 || cat.videos.length === 3) ? 2 : 4).map(vid => (
                             <div key={vid.id} className="relative w-full h-full overflow-hidden bg-white/5 flex items-center justify-center">
                               <YouTubeThumbnail youtubeId={vid.youtubeId} objectFit={cat.id === "reels" ? "contain" : "cover"} />
                             </div>

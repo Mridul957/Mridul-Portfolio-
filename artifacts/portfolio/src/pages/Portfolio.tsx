@@ -10,8 +10,10 @@ export default function Portfolio() {
     return params.get("category");
   });
 
-  // Track browser Back/Forward navigation popstate to keep visual view in sync
+  // Scroll to top on mount and track browser Back/Forward navigation popstate
   useEffect(() => {
+    window.scrollTo(0, 0);
+    
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
       setCurrentCategory(params.get("category"));
@@ -28,7 +30,7 @@ export default function Portfolio() {
     } else {
       url.searchParams.delete("category");
     }
-    window.history.replaceState(null, "", url.pathname + url.search);
+    window.history.pushState(null, "", url.pathname + url.search);
     setCurrentCategory(catId);
   };
 
