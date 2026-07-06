@@ -103,6 +103,30 @@ export default function ProjectDetail() {
         title: "Kyfesto Cafe Virtual Tour",
         location: "Jaipur, Rajasthan",
         url: "https://www.google.com/maps/embed?pb=!4v1781885915541!6m8!1m7!1sCAoSHENJQUJJaENKcUpXRDg3c1g1X29UN0ZXcnJGT3c.!2m2!1d26.90017760729375!2d75.79324199359938!3f90.51512166751853!4f-3.936212563533573!5f0.7820865974627469"
+      },
+      {
+        id: "map-3",
+        title: "Shreeniwas Pure Veg",
+        location: "Virtual Tour",
+        url: "https://www.google.com/maps/embed?pb=!4v1783355518548!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDRzYlRUS1E.!2m2!1d20.69711995248958!2d77.01405227326947!3f332.2!4f-12.049999999999997!5f0.7820865974627469"
+      },
+      {
+        id: "map-4",
+        title: "Noel School",
+        location: "Virtual Tour",
+        url: "https://www.google.com/maps/embed?pb=!4v1783355590889!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDRzZlRDS1E.!2m2!1d20.68311083178596!2d77.01494800891368!3f267.32!4f-17.540000000000006!5f0.7820865974627469"
+      },
+      {
+        id: "map-5",
+        title: "The Bungalow Cafe",
+        location: "Virtual Tour",
+        url: "https://www.google.com/maps/embed?pb=!4v1783355608442!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ3RoNVhPaHdF!2m2!1d21.13803719703662!2d72.77432905794785!3f167.87!4f-13.86!5f0.4000000000000002"
+      },
+      {
+        id: "map-6",
+        title: "RG Exclusive Stay & Fine Dine",
+        location: "Virtual Tour",
+        url: "https://www.google.com/maps/embed?pb=!4v1783355506789!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRFNzcUdlRHc.!2m2!1d20.69929531573287!2d77.01444241203274!3f64.07!4f-4.680000000000007!5f0.7820865974627469"
       }
     ];
 
