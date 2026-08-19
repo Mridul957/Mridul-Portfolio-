@@ -40,6 +40,77 @@ interface Category {
 
 const categories: Category[] = [
   {
+    id: "youtube",
+    title: "Youtube Long Video",
+    subtitle: "Aesthetic Documentaries & Tutorials",
+    desc: "Paced, long-form post-production projects for vloggers, travelers, and educators. Focused on narrative structure, graphic overlays, and steady grading.",
+    image: "/portfolio/travel.png",
+    tags: ["YouTube", "Long-Form", "Documentary"],
+    achievements: [
+      "Structured multi-hour RAW footage into engaging 10-15m sequences",
+      "Integrated kinetic charts, screen sweeps, and sound-cued graphics",
+      "Successfully optimized vocal tracks and eliminated audio room hiss"
+    ],
+    videos: [
+      { id: "y4", fallbackTitle: "Claude Found ₹4 Crore Hidden in an Old File Here's the Exact Method I Used", youtubeId: "37WRO6ZbbLQ" },
+      { id: "y1", fallbackTitle: "10 Worst Items I Dont Buy", youtubeId: "gpnq8KA3hsA" },
+      { id: "y2", fallbackTitle: "How Stress Can Save Your Life", youtubeId: "S_xOE_86h78" }
+    ]
+  },
+  {
+    id: "reels",
+    title: "Reels",
+    subtitle: "Short-Form Vertical Content",
+    desc: "High-retention vertical reels, talking head clips, and fitness promos designed for Instagram and TikTok with kinetic captions and quick cuts.",
+    image: "/portfolio/music-video.png",
+    tags: ["Reels", "Shorts", "Vertical"],
+    achievements: [
+      "Engineered bespoke caption animations and hook transitions",
+      "Pioneered vector-shape scaling for clean multi-resolution scales",
+      "Layered procedural noise and dynamic sound effects"
+    ],
+    videos: [
+      { id: "r1", fallbackTitle: "Reel 1", youtubeId: "3WUHnr3lfSQ" },
+      { id: "r2", fallbackTitle: "Reel 2", youtubeId: "XScOlrlJfuc" },
+      { id: "r3", fallbackTitle: "Reel 3", youtubeId: "zfl4KYSVryE" },
+      { id: "r4", fallbackTitle: "Reel 4", youtubeId: "MnYUhn3M3Yk" },
+      { id: "r5", fallbackTitle: "Reel 5", youtubeId: "uMD0IoQ9vtk" }
+    ]
+  },
+  {
+    id: "brands",
+    title: "Brands Ads and Work",
+    subtitle: "High-Converting Commercial Visuals",
+    desc: "Commercial spec promos and ad reels crafted to maximize retention, deliver concise value props, and maintain elite brand visual identities.",
+    image: "/portfolio/commercial.png",
+    tags: ["Brand Ads", "Retention Focus", "Commercial"],
+    achievements: [
+      "Maintained averages of 70%+ audience retention on vertical ad cuts",
+      "Custom color-grades designed to mirror modern corporate assets",
+      "Engineered advanced object tracking and floating text popups"
+    ],
+    videos: [
+      { id: "b1", fallbackTitle: "Verandah", youtubeId: "Vrfm9kYUiKk" },
+      { id: "b2", fallbackTitle: "We Are JECRCians", youtubeId: "1nZyFdmDQ_0" }
+    ]
+  },
+  {
+    id: "documentary",
+    title: "Documentary",
+    subtitle: "In-Depth Storytelling & Narratives",
+    desc: "Long-form storytelling capturing real-world subjects with cinematic visuals and authentic narratives.",
+    image: "/portfolio/events.png",
+    tags: ["STORY", "DOCU", "NARRATIVE"],
+    achievements: [
+      "Crafted compelling narratives through extensive footage logging and precise editing",
+      "Enhanced emotional impact with documentary-style color grading and sound design",
+      "Delivered broadcast-ready documentary features"
+    ],
+    videos: [
+      { id: "d1", fallbackTitle: "Jf Doc Aftermovie", youtubeId: "YT5mjXRmfpQ" }
+    ]
+  },
+  {
     id: "wedding",
     title: "Cinematic Wedding Films",
     subtitle: "Event Storytelling & Color Science",
@@ -94,77 +165,6 @@ const categories: Category[] = [
     ],
     videos: [
       { id: "m1", fallbackTitle: "Tere Bin Official Music Video", youtubeId: "HDan7USNYTM" }
-    ]
-  },
-  {
-    id: "brands",
-    title: "Brands Ads and Work",
-    subtitle: "High-Converting Commercial Visuals",
-    desc: "Commercial spec promos and ad reels crafted to maximize retention, deliver concise value props, and maintain elite brand visual identities.",
-    image: "/portfolio/commercial.png",
-    tags: ["Brand Ads", "Retention Focus", "Commercial"],
-    achievements: [
-      "Maintained averages of 70%+ audience retention on vertical ad cuts",
-      "Custom color-grades designed to mirror modern corporate assets",
-      "Engineered advanced object tracking and floating text popups"
-    ],
-    videos: [
-      { id: "b1", fallbackTitle: "Verandah", youtubeId: "Vrfm9kYUiKk" },
-      { id: "b2", fallbackTitle: "We Are JECRCians", youtubeId: "1nZyFdmDQ_0" }
-    ]
-  },
-  {
-    id: "youtube",
-    title: "Youtube Long Video",
-    subtitle: "Aesthetic Documentaries & Tutorials",
-    desc: "Paced, long-form post-production projects for vloggers, travelers, and educators. Focused on narrative structure, graphic overlays, and steady grading.",
-    image: "/portfolio/travel.png",
-    tags: ["YouTube", "Long-Form", "Documentary"],
-    achievements: [
-      "Structured multi-hour RAW footage into engaging 10-15m sequences",
-      "Integrated kinetic charts, screen sweeps, and sound-cued graphics",
-      "Successfully optimized vocal tracks and eliminated audio room hiss"
-    ],
-    videos: [
-      { id: "y1", fallbackTitle: "10 Worst Items I Dont Buy", youtubeId: "gpnq8KA3hsA" },
-      { id: "y2", fallbackTitle: "How Stress Can Save Your Life", youtubeId: "S_xOE_86h78" },
-      { id: "y3", fallbackTitle: "Jecrc Campus Tour", youtubeId: "z9gM_7aY64U" }
-    ]
-  },
-  {
-    id: "reels",
-    title: "Reels",
-    subtitle: "Short-Form Vertical Content",
-    desc: "High-retention vertical reels, talking head clips, and fitness promos designed for Instagram and TikTok with kinetic captions and quick cuts.",
-    image: "/portfolio/music-video.png",
-    tags: ["Reels", "Shorts", "Vertical"],
-    achievements: [
-      "Engineered bespoke caption animations and hook transitions",
-      "Pioneered vector-shape scaling for clean multi-resolution scales",
-      "Layered procedural noise and dynamic sound effects"
-    ],
-    videos: [
-      { id: "r1", fallbackTitle: "Reel 1", youtubeId: "3WUHnr3lfSQ" },
-      { id: "r2", fallbackTitle: "Reel 2", youtubeId: "XScOlrlJfuc" },
-      { id: "r3", fallbackTitle: "Reel 3", youtubeId: "zfl4KYSVryE" },
-      { id: "r4", fallbackTitle: "Reel 4", youtubeId: "MnYUhn3M3Yk" },
-      { id: "r5", fallbackTitle: "Reel 5", youtubeId: "uMD0IoQ9vtk" }
-    ]
-  },
-  {
-    id: "documentary",
-    title: "Documentary",
-    subtitle: "In-Depth Storytelling & Narratives",
-    desc: "Long-form storytelling capturing real-world subjects with cinematic visuals and authentic narratives.",
-    image: "/portfolio/events.png",
-    tags: ["STORY", "DOCU", "NARRATIVE"],
-    achievements: [
-      "Crafted compelling narratives through extensive footage logging and precise editing",
-      "Enhanced emotional impact with documentary-style color grading and sound design",
-      "Delivered broadcast-ready documentary features"
-    ],
-    videos: [
-      { id: "d1", fallbackTitle: "Jf Doc Aftermovie", youtubeId: "YT5mjXRmfpQ" }
     ]
   }
 ];
